@@ -14,11 +14,6 @@ interface Movie {
   first_air_date?: string; 
 }
 
-interface HeroSectionProps {
-  toggleFavorite: (movie: Movie) => void;
-  isFavorite: (movie: Movie) => boolean;
-}
-
 const useFetchMovies = () => {
   const [movies, setMovies] = useState<Movie[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

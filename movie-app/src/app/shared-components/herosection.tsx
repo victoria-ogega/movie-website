@@ -109,7 +109,7 @@ export default function HeroSection() {
         </div>
       </section>
 
-      {/* Favorites list rendered below the hero within the same file */}
+    
       <section className="p-6 bg-black text-white">
         <h2 className="text-2xl mb-4">My Favorites</h2>
         {favorites.length === 0 ? (
