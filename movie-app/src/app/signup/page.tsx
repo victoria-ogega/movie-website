@@ -4,7 +4,7 @@ import Button from "../shared-components/button";
 import { FaEyeSlash } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import Link from "next/link";
-function SignIn() {
+function SignUp() {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -25,13 +25,29 @@ function SignIn() {
                     <div>
                         <form className="bg-black w-130 h-155 m-auto mt-4 p-10 rounded-xl">
                             <div className="">
-                                <h1 className="text-yellow-500 ml-40 font-bold mb-10 text-4xl">Sign In</h1>
+                                <h1 className="text-yellow-500 ml-40 font-bold mb-10 text-4xl">Sign Up</h1>
+                                  <div>
+                                    <input type="text" name="First Name" placeholder="First Name" value={formData.email} onChange={handleInputChange}
+                                        className=" border border-neutral-400 text-white rounded-md  placeholder:text-neutral-400 w-70 p-3 mb-10 ml-25" />
+                                </div>
+                                  <div>
+                                    <input type="text" name="Last Name" placeholder="Last Name" value={formData.email} onChange={handleInputChange}
+                                        className=" border border-neutral-400 text-white rounded-md  placeholder:text-neutral-400 w-70 p-3 mb-10 ml-25" />
+                                </div>
                                 <div>
                                     <input type="text" name="email" placeholder="Email or Phone Number" value={formData.email} onChange={handleInputChange}
-                                        className=" border border-neutral-400 text-white rounded-md  placeholder:text-neutral-400 w-70 p-3 mb-15 ml-25" />
+                                        className=" border border-neutral-400 text-white rounded-md  placeholder:text-neutral-400 w-70 p-3 mb-10 ml-25" />
                                 </div>
                                 <div className="relative ml-5 mb-15 w-100">
                                     <input type={showPassword ? "text" : "password"} name="password" placeholder="Password" value={formData.password} onChange={handleInputChange}
+                                        className="border border-neutral-400 text-white rounded-md placeholder:text-neutral-400 w-70  p-3 ml-20" />
+                                    <button type="button" onClick={() => setShowPassword(!showPassword)}
+                                        className="absolute right-12 top-4 text-white">
+                                        {showPassword ? <FaEyeSlash /> : <FaEye />}
+                                    </button>
+                                </div>
+                                  <div className="relative ml-5 mb-15 w-100">
+                                    <input type={showPassword ? "text" : "password"} name="Confirm password" placeholder="Confirm Password" value={formData.password} onChange={handleInputChange}
                                         className="border border-neutral-400 text-white rounded-md placeholder:text-neutral-400 w-70  p-3 ml-20" />
                                     <button type="button" onClick={() => setShowPassword(!showPassword)}
                                         className="absolute right-12 top-4 text-white">
@@ -42,7 +58,7 @@ function SignIn() {
                                     <Button
                                         buttonText={
                                             <li className="list-none" >
-                                                <Link href="/Sign in" className="text-sm">Sign in</Link>
+                                                <Link href="/Sign in" className="text-sm">Sign Up</Link>
                                             </li>
                                         }
                                         variant="secondary"
@@ -52,7 +68,7 @@ function SignIn() {
 
                             </div>
                             <p className="mt-3 text-yellow-400 hover:cursor-pointer underline ml-40 mt-10">Forgot password?</p>
-                            <p className="mt-3 text-white hover:cursor-pointer  ml-30 mt-10">Don't have an account? <Link href={"/signup"} className="text-yellow-500">sign up</Link></p>
+                            <p className="mt-3 text-white hover:cursor-pointer  ml-30 mt-10">Already have an account? <Link href={"/signin"} className="text-yellow-500">sign In</Link></p>
 
                         </form>
                     </div>
@@ -61,4 +77,4 @@ function SignIn() {
         </div>
     )
 }
-export default SignIn;
+export default SignUp;
