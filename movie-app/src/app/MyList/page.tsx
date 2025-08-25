@@ -1,4 +1,3 @@
-import Image from "next/image";
 interface Movie {
   id: number;
   original_title: string;
@@ -20,7 +19,7 @@ export default function MyList({ favorites, toggleFavorite }: MyListProps) {
     <section className="grid grid-cols-1 md:grid-cols-3 gap-4 p-6">
       {favorites.map((movie) => (
         <div key={movie.id} className="relative bg-black text-white rounded-lg shadow">
-          <Image
+          <img
             src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
             alt={movie.original_title}
             className="rounded-t-lg object-cover w-full h-48"

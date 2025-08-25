@@ -3,7 +3,6 @@ import useFetchNowPlaying from "../hooks/useFetchNowPlating";
 import Navbar from "../shared-components/Navbar";
 import { Footer } from "../shared-components/Footer";
 import { useState } from "react";
-import Image from "next/image";
 
 export default function Latest() {
   const { movies, loading, error } = useFetchNowPlaying();
@@ -31,7 +30,7 @@ export default function Latest() {
           {sortedMovies.map((movie) => (
             <div key={movie.id} className="w-70 mt-4 mb-5 ml-4 pl-10">
               {movie.poster_path && (
-                <Image
+                <img
                   alt={`${movie.original_title || movie.original_title} poster`}
                   src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                   width={300}
