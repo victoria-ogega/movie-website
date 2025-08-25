@@ -23,7 +23,7 @@ function SignUp() {
                 <div className="absolute inset-0">
                     <h1 className=" text-6xl mt-15 ml-140 font-bold">M<span className="text-yellow-500">00</span>VIE</h1>
                     <div>
-                        <form className="bg-black w-130 h-155 m-auto mt-4 p-10 rounded-xl">
+                        <form className="bg-black w-130 h-185 m-auto mt-4 p-10 pt-3 rounded-xl">
                             <div className="">
                                 <h1 className="text-yellow-500 ml-40 font-bold mb-10 text-4xl">Sign Up</h1>
                                   <div>
@@ -54,7 +54,7 @@ function SignUp() {
                                         {showPassword ? <FaEyeSlash /> : <FaEye />}
                                     </button>
                                 </div>
-                                <div className="ml-40">
+                                <div className="ml-40 ">
                                     <Button
                                         buttonText={
                                             <li className="list-none" >
@@ -67,7 +67,7 @@ function SignUp() {
                                 </div>
 
                             </div>
-                            <p className="mt-3 text-yellow-400 hover:cursor-pointer underline ml-40 mt-10">Forgot password?</p>
+                            <p className="mt-3 text-yellow-400 hover:cursor-pointer underline ml-40 ">Forgot password?</p>
                             <p className="mt-3 text-white hover:cursor-pointer  ml-30 mt-10">Already have an account? <Link href={"/signin"} className="text-yellow-500">sign In</Link></p>
 
                         </form>
