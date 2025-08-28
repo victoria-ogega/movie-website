@@ -110,7 +110,7 @@ export default function HeroSection() {
       </section>
 
       <section className="p-7 bg-black text-white">
-        <h2 className="text-2xl mb-4">My Favorites</h2>
+        <h1 className="text-2xl mb-4">My Favorites</h1>
         {favorites.length === 0 ? (
           <p>No favorite movies yet.</p>
         ) : (
